@@ -20,7 +20,7 @@
 // const char* password = "WiFiPassword";  // WiFi Password
 
 
-#define DHTTYPE DHT11 // Set DHT Type : DHT11 or DHT22
+#define DHTTYPE DHT11 // Set DHT Type : DHT11, DHT21 or DHT22
 #define DHTPIN  D4 // Set which pin the DHT module is connected to, you can usually find this on the board
  
 // ***** Do not edit below this line ***************
@@ -39,6 +39,7 @@ void setup(void)
   Serial.begin(115200);  // Serial connection from ESP-01 via 3.3v console cable
 
   WiFi.begin(ssid, password);
+  WiFi.mode(WIFI_STA);
   Serial.print("\n\r \n\rWorking to connect");
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
