@@ -1,5 +1,5 @@
 /*
- * SHT30-TemperatureSensor
+ * DHT-TemperatureSensor
  * By : Ferry Manders
  * https://github.com/ferrymanders
  * 
